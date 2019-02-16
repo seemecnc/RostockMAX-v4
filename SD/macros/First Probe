@@ -1,19 +1,14 @@
-M117 Begin RostockMAX Autolevel Calibration
-M117 Heating Bed Please Wait
-M190 S60
+M117 Begin RostockMAX v4 Initial Calibration
 M104 S0
 M140 S0
-M117 Heat Off - Starting Autolevel Keep Clear
-M558 P5 I0 A1 S0.05 R0.4 H20 F2500
+M558 P5 I0 A1 S0.05 R0.4 H20 F1000
 G32
-M500
-M117 Re-Heating for Bed Mapping Please Wait Keep Clear
-M558 P5 I0 A1 S0.05 R0.4 H20 F2500 
-M190 S60
+M558 P5 I0 A1 S0.05 R0.4 H20 F1000 
 M140 S0
 M106 P0 S0
 G29
 M500
 G28
 M84
-M375M117 End RostockMAX Autolevel Calibration
+M375
+M117 End RostockMAX v4 Initial Calibration

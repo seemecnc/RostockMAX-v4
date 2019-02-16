@@ -1,13 +1,11 @@
-M117 RostockMAX v32 Begin Auto Calibration
-M117 Pre Heating Please Wait
-M190 S70
+M117 RostockMAX v4 Begin Auto Calibration
 M104 S0
 M140 S0
-M117 Heaters Off Begin Probing
-M558 P5 I0 A2 S0.05 R0.4 H20 F2500
+M558 P5 I0 A2 S0.05 R0.4 H20 F1000
 G32
 M500
 G28
 M84
 M375
-M117 RostockMAX v32 Auto Calibration Complete
+M117 RostockMAX v4 Auto Calibration Complete
+
