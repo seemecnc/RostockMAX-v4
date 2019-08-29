@@ -1,6 +1,6 @@
 M111 S0                                 ; debug off
 M550 PRMAXV4                            ; Printer name
-M929 P"eventlog.txt" S1                 ; event logging start
+;M929 P"eventlog.txt" S1                 ; event logging start
 M555 P2                                 ; Gcode Output Type
 
 ; communications and networking setup
