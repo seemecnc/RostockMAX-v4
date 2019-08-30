@@ -43,7 +43,7 @@ M106 P2 T50 S0.7 H1                     ; Heat sink fan
 ;heated bed and temperature sensor parameters
 M307 H0 B0                              ; Heated Bed (H2)
 M305 P0 T100000 B4388 R4700 H30 L0      ; Bed thermistor
-M305 P1 T100000 B4388 R4700 H30 L0      ; Hotend Thermistor
+M305 P1 T100000 B4388 R4700 C7.06e-8 H30 L0      ; Hotend Thermistor
 
 ;extruder one
 M563 P0 D0 H1                           ; Hotend (T0), drive (E0), heater (H1)
