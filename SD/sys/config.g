@@ -54,8 +54,8 @@ G10 P0 S0 R0                            ; Hotend operating and standby temperatu
 ;G10 P1 S0 R0                           ; Hotend (1) operating and standby temperatures
 
 ;hotend probe parameters
-M558 P5 I0 A2 S0.05 R0.4 H20 F800       ; Strain gage probe settings
-G31 P100 X0 Y0 Z-0.3                    ; Probe trigger and offset values
+M558 P5 I0 A2 S0.05 R0.4 H20 F2500       ; Strain gage probe settings
+G31 P100 X0 Y0 Z-0.25                    ; Probe trigger and offset values
 M557 R140 S30                           ; default bed mapping
 M501                                    ; Load saved config values
 T0                                      ; Select Tool 0
