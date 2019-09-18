@@ -19,9 +19,8 @@ M574 X2 Y2 Z2 S1                        ; set end-stop configuration (all end-st
 
 ; Choose an arm length L depending on arms installed and filament printed
 ; NOTES: delta radius, diagonal rod length, printable radius and homed height
-M665 R144 L291.06 B135 H400 X0 Y0 Z0    ; PLA Standard Injection Molded Arms 
-;M665 R144 L289.1 B135 H400 X0 Y0 Z0    ; ABS Standard Injection Molded Arms 
-;M665 R144 L337 B135 H350 X0 Y0 Z0      ; optional carbon fiber arms length setting
+M665 R144 L289.1 B135 H400 X0 Y0 Z0    ;  Standard Injection Molded Arms 
+;M665 R144 L337 B135 H350 X0 Y0 Z0      ; carbon fiber arms length setting
 
 
 M666 X0 Y0 Z0                           ; end-stop offsets in mm
