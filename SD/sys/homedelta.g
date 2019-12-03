@@ -1,4 +1,4 @@
-M203 Z25000
+M203 Z15000
 G91                         ; use relative positioning
 G1 S1 X750 Y750 Z750 F5000  ; move all carriages up, stopping at the endstops
 G1 S2 X-5 Y-5 Z-5 F500     ; move all towers down 5mm
