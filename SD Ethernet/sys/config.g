@@ -1,11 +1,18 @@
-M111 S0                                 ; debug off
-M550 PRMAXV4                            ; Printer name
-;M929 P"eventlog.txt" S1                 ; event logging start
-M555 P2                                 ; Gcode Output Type
+; RostockMAX v4 Ethernet Control
+; by SeeMeCNC
 
-; communications and networking setup
-M552 S1                                 ; Enable Wifi
-M575 P1 B57600 S1                       ; PanelDue Comm Setup
+M111 S0					; debug off
+M550 RostockMAX-v4                     ; Printer name (can be anything you want)
+;M929 P"eventlog.txt" S1                ; event logging start
+
+; Networking & Commnications
+M540 P0xF0:0xE1:0xD2:0xC3:0x11:0x11    ; Set your own MAC Address (make different for each SeeMeCNC printer you own)
+G4 P1000                               ; pause a second
+M552 P0.0.0.0                          ; IP address P0.0.0.0 uses DHCP 
+G4 P1000                               ; pause a second
+M552 S1                                ; enable network
+G4 P1000                               ; pause a second
+M575 P1 B57600 S1                      ; PanelDue Comm Setup
 
 ; machine delta parameters
 G21                                     ; Work in millimeters
@@ -21,7 +28,6 @@ M574 X2 Y2 Z2 S1                        ; set end-stop configuration (all end-st
 ; NOTES: delta radius, diagonal rod length, printable radius and homed height
 M665 R144 L289.1 B135 H400 X0 Y0 Z0    ;  Standard Injection Molded Arms 
 ;M665 R144 L337 B135 H350 X0 Y0 Z0      ; carbon fiber arms length setting
-
 
 M666 X0 Y0 Z0                           ; end-stop offsets in mm
 
@@ -54,10 +60,15 @@ G10 P0 S0 R0                            ; Hotend operating and standby temperatu
 
 ;hotend probe parameters
 M558 P5 I0 A2 S0.05 R0.4 H20 F2500      ; Strain gage probe settings
-G31 P100 X0 Y0 Z-0.25                   ; Probe trigger and offset values Glass Plate Only
+G31 P100 X0 Y0 Z-0.1                    ; Probe trigger and offset values Glass Plate Only
 ;G31 P100 X0 Y0 Z-0.6                   ; Probe trigger and offset values for FabLam Flex Spring Steel PEI on Glass
 M557 R140 S30                           ; default bed mapping
 M501                                    ; Load saved config values
 T0                                      ; Select Tool 0
 M375                                    ; Load height map
+
+
+
+
+
 
