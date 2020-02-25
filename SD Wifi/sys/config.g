@@ -1,5 +1,5 @@
-M111 S0                                 ; debug off
 M550 PRMAXV4                            ; Printer name
+M111 S0                                 ; debug off
 ;M929 P"eventlog.txt" S1                 ; event logging start
 M555 P2                                 ; Gcode Output Type
 
