@@ -30,8 +30,8 @@ M350 X16 Y16 Z16 E16:16 I1              ; Set 16x micro-stepping w/ Interpolatio
 M92 X200 Y200 Z200                      ; Set axis steps/mm
 M92 E182.0:182.0                        ; Set extruder steps/mm
 M906 X1300 Y1300 Z1300 E1200:1200 I50   ; Set motor currents (mA) and idle current %
-M201 X2400 Y2400 Z2400 E5000            ; Accelerations (mm/s^2)
-M203 X12000 Y12000 Z12000 E15000        ; Maximum speeds (mm/min)
+M201 X3400 Y3400 Z3400 E5000            ; Accelerations (mm/s^2)
+M203 X15000 Y15000 Z15000 E15000        ; Maximum speeds (mm/min)
 M566 X500 Y500 Z500 E2000               ; Maximum instant speed changes mm/minute
 
 ; fan setup parameters

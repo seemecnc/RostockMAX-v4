@@ -1,11 +1,18 @@
-M550 PRMAXV4                            ; Printer name
-M111 S0                                 ; debug off
-;M929 P"eventlog.txt" S1                 ; event logging start
-M555 P2                                 ; Gcode Output Type
+; RostockMAX v4 Ethernet Control
+; by SeeMeCNC
 
-; communications and networking setup
-M552 S1                                 ; Enable Wifi
-M575 P1 B57600 S1                       ; PanelDue Comm Setup
+M111 S0					; debug off
+M550 RostockMAX-v4                     ; Printer name (can be anything you want)
+;M929 P"eventlog.txt" S1                ; event logging start
+
+; Networking & Commnications
+M540 P0xF0:0xE1:0xD2:0xC3:0x11:0x11    ; Set your own MAC Address (make different for each SeeMeCNC printer you own)
+G4 P1000                               ; pause a second
+M552 P0.0.0.0                          ; IP address P0.0.0.0 uses DHCP 
+G4 P1000                               ; pause a second
+M552 S1                                ; enable network
+G4 P1000                               ; pause a second
+M575 P1 B57600 S1                      ; PanelDue Comm Setup
 
 ; machine delta parameters
 G21                                     ; Work in millimeters
@@ -22,7 +29,6 @@ M574 X2 Y2 Z2 S1                        ; set end-stop configuration (all end-st
 M665 R144 L289.1 B135 H400 X0 Y0 Z0    ;  Standard Injection Molded Arms 
 ;M665 R144 L337 B135 H350 X0 Y0 Z0      ; carbon fiber arms length setting
 
-
 M666 X0 Y0 Z0                           ; end-stop offsets in mm
 
 ; motion control parameters
@@ -30,8 +36,8 @@ M350 X16 Y16 Z16 E16:16 I1              ; Set 16x micro-stepping w/ Interpolatio
 M92 X200 Y200 Z200                      ; Set axis steps/mm
 M92 E182.0:182.0                        ; Set extruder steps/mm
 M906 X1300 Y1300 Z1300 E1200:1200 I50   ; Set motor currents (mA) and idle current %
-M201 X2400 Y2400 Z2400 E5000            ; Accelerations (mm/s^2)
-M203 X12000 Y12000 Z12000 E15000        ; Maximum speeds (mm/min)
+M201 X3400 Y3400 Z3400 E5000            ; Accelerations (mm/s^2)
+M203 X15000 Y15000 Z15000 E15000        ; Maximum speeds (mm/min)
 M566 X500 Y500 Z500 E2000               ; Maximum instant speed changes mm/minute
 
 ; fan setup parameters
@@ -60,4 +66,9 @@ M557 R140 S30                           ; default bed mapping
 M501                                    ; Load saved config values
 T0                                      ; Select Tool 0
 M375                                    ; Load height map
+
+
+
+
+
 
