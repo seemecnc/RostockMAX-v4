@@ -1,0 +1,16 @@
+M291 P"Insert filament just past the EZR, then click OK" R"Load Filament" S3
+G28
+M109 S220
+M83
+G91
+G1 E710 F5000
+G1 E50 F150
+M82
+G92 E0
+G92 E-5 F1000
+G92 E-155 F5000
+G92 E0
+M400
+M104 S0
+M84
+
